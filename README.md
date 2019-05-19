@@ -14,11 +14,11 @@ Minhas soluções para os exercícios do livro Deitel & Deitel - Java How to Pro
 > - **Chapter 9**  - Programação orientada a objetos: herança
 > - **Chapter 10** - Programação orientada a objetos: polimorfismo e interfaces
 > - **Chapter 11** - Tratamento de exceção: um exame mais profundo
-> - **Chapter 12** - Componentes GUI: parte 1
-> - **Chapter 13** - Imagens gráficas e Java 2D
-> - **Chapter 14** - Strings, caracteres e expressões regulares
-> - **Chapter 15** - Arquivos, fluxos e serialização de objetos
-> - **Chapter 16** - Coleções genéricas
+> - **Chapter 12** - [Componentes GUI: parte 1](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch12)
+> - **Chapter 13** - [Imagens gráficas e Java 2D](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch13)
+> - **Chapter 14** - [Strings, caracteres e expressões regulares](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch14)
+> - **Chapter 15** - [Arquivos, fluxos e serialização de objetos](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch15)
+> - **Chapter 16** - [Coleções genéricas](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch16)
 > - **Chapter 17** - Lambdas e fluxos Java SE 8
 > - **Chapter 18** - Recursão
 > - **Chapter 19** - Pesquisa, classificação e Big O
