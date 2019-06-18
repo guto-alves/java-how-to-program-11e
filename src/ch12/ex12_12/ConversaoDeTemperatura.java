@@ -1,7 +1,9 @@
 /*
- * Objetivo: 12.12 (Conversão de temperatura) Escreva um aplicativo de conversão de temperatura que converte de Fahrenheit em Celsius. A temperatura
- * em Fahrenheit deve ser inserida pelo teclado (por um JTextField). Um JLabel deve ser utilizado para exibir a temperatura convertida.
- * Utilize a seguinte fórmula para a conversão: Celsius = 5/9 x (Fahrenheit – 32)
+ * Objetivo: 12.12 (Conversão de temperatura) Escreva um aplicativo de conversão de temperatura que
+ * converte de Fahrenheit em Celsius. A temperatura em Fahrenheit deve ser inserida pelo teclado
+ * (por um JTextField). Um JLabel deve ser utilizado para exibir a temperatura convertida.
+ * Utilize a seguinte fórmula para a conversão:
+ * 			 Celsius = 5/9 x (Fahrenheit – 32)
  * 
  * Autor: Gustavo Alves
  * Data: 24/03/2019
@@ -68,5 +70,4 @@ public class ConversaoDeTemperatura extends JFrame implements KeyListener {
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
 	}
-
 }

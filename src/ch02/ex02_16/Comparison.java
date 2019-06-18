@@ -1,7 +1,8 @@
 /*
- * Objetivo: 2.16 (Comparando inteiros) Escreva um aplicativo que solicite ao usuário inserir dois inteiros, obtenha dele esses
- * números e exiba o número maior seguido pelas palavras “is larger". Se os números forem iguais, imprima a mensagem “These numbers
- * are equal". Utilize as técnicas mostradas na Figura 2.15.
+ * Objetivo: 2.16 (Comparando inteiros) Escreva um aplicativo que solicite ao usuÃ¡rio
+ * inserir dois inteiros, obtenha dele esses nÃºmeros e exiba o nÃºmero maior seguido
+ * pelas palavras â€œis larger". Se os nÃºmeros forem iguais, imprima a mensagem 
+ * â€œThese numbers are equal". Utilize as tÃ©cnicas mostradas na Figura 2.15.
  * 
  * Autor: Gustavo Alves
  */

@@ -1,15 +1,15 @@
 /*
- * Objetivo: 2.33 (Calculadora de Ìndice de massa corporal) Introduzimos a calculadora de Ìndice de massa corporal (IMC) no 
- * ExercÌcio 1.10. As fÛrmulas para calcular o IMC s„o 
+ * Objetivo: 2.33 (Calculadora de √≠ndice de massa corporal) Introduzimos a calculadora de √≠ndice
+ * de massa corporal (IMC) no Exerc√≠cio 1.10. As f√≥rmulas para calcular o IMC s√£o 
  * 
- * IMC = (pesoEmLibras ◊ 703) / alturaEmPolegadas≤
+ * 		IMC = (pesoEmLibras √ó 703) / alturaEmPolegadas¬≤
  * 				  ou
- * IMC = pesoEmQuilogramas / alturaEmMetros≤
+ * 		IMC = pesoEmQuilogramas / alturaEmMetros¬≤
  * 
- * Crie um aplicativo de calculadora IMC que leia o peso do usu·rio em libras e a altura em polegadas (ou, se preferir,
- * o peso em quilogramas e a altura em metros) e, ent„o, calcule e exiba o Ìndice de massa corporal dele. AlÈm disso, 
- * que exiba as seguintes informaÁıes do Department of Health and Human Services/National Institutes of Health, assim
- * o usu·rio pode avaliar o seu IMC:
+ * Crie um aplicativo de calculadora IMC que leia o peso do usu√°rio em libras e a altura em polegadas
+ * (ou, se preferir, o peso em quilogramas e a altura em metros) e, ent√£o, calcule e exiba o √≠ndice de
+ * massa corporal dele. Al√©m disso, que exiba as seguintes informa√ß√µes do Department of Health and 
+ * Human Services/National Institutes of Health, assim o usu√°rio pode avaliar o seu IMC:
  * 
  * BMI VALUES
  * Underweight:  less than 18.5
@@ -17,10 +17,11 @@
  * Overweight:   between 25 and 29.9
  * Obese: 		 30 or greater
  * 
- * [Nota: neste capÌtulo, vocÍ aprendeu a utilizar o tipo int para representar n˙meros inteiros. Os c·lculos de IMC, quando
- * feitos com valores int, produzir„o resultados com n˙meros inteiros. No CapÌtulo 3, vocÍ aprender· a utilizar o tipo double
- * para representar n˙meros com pontos decimais. Quando os c·lculos de IMC s„o realizados com doubles, eles produzir„o n˙meros
- * com pontos decimais ó esses s„o chamados de n˙meros de ìponto flutuanteî.]
+ * [Nota: neste cap√≠tulo, voc√™ aprendeu a utilizar o tipo int para representar n√∫meros inteiros.
+ * Os c√°lculos de IMC, quando feitos com valores int, produzir√£o resultados com n√∫meros inteiros.
+ * No Cap√≠tulo 3, voc√™ aprender√° a utilizar o tipo double para representar n√∫meros com pontos
+ * decimais. Quando os c√°lculos de IMC s√£o realizados com doubles, eles produzir√£o n√∫meros
+ * com pontos decimais ‚Äî esses s√£o chamados de n√∫meros de ‚Äúponto flutuante‚Äù.]
  * 
  * Autor: Gustavo Alves
  */
@@ -47,10 +48,10 @@ public class IMC {
 
 		imc = pesoEmQuilogramas / (alturaEmMetros * alturaEmMetros);
 
-		System.out.printf("%nSeu IMC È %,.2f%n%n", imc);
+		System.out.printf("%nSeu IMC √© %,.2f%n%n", imc);
 
 		System.out.println(
-				"InformaÁıes do Department of Health and Human Services/National Institutes of Health\n\tBMI VALUES\r\n"
+				"Informa√ß√µes do Department of Health and Human Services/National Institutes of Health\n\tBMI VALUES\r\n"
 						+ "Abaixo do peso:  menos de 18,5\r\n" + "Normal:          entre 18,5 e 24,9\r\n"
 						+ "Excesso de peso: entre 25 e 29,9\r\n" + "Obeso:       	30 ou maior");
 	}

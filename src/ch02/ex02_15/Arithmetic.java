@@ -1,6 +1,7 @@
 /*
- * Objetivo: 2.15 (AritmÈtica) Escreva um aplicativo que solicite ao usu·rio inserir dois inteiros, obtenha dele esses
- * n˙meros e imprima sua soma, produto, diferenÁa e quociente (divis„o). Utilize as tÈcnicas mostradas na Figura 2.7.
+ * Objetivo: 2.15 (Aritm√©tica) Escreva um aplicativo que solicite ao usu√°rio inserir dois
+ * inteiros, obtenha dele esses n√∫meros e imprima sua soma, produto, diferen√ßa e quociente
+ * (divis√£o). Utilize as t√©cnicas mostradas na Figura 2.7.
  * 
  * Autor: Gustavo Alves
  */

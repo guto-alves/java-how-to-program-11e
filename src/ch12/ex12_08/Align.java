@@ -1,8 +1,8 @@
 /*
- * Objetivo     : 12.8 Crie a seguinte GUI. Você não precisa fornecer funcionalidades.
+ * Objetivo     : 12.8 Crie a seguinte GUI. VocÃª nÃ£o precisa fornecer funcionalidades.
  * 
  * Programador  : Gustavo Alves - gustavo.almeida13@fatec.sp.gov.br
- * Data Criação : 28 de fev de 2019
+ * Data CriaÃ§Ã£o: 28 de fev de 2019
  */
 
 package ch12.ex12_08;

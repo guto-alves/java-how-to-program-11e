@@ -1,6 +1,6 @@
 /*
- * Objetivo: 2.25 (Ímpar ou par) Escreva um aplicativo que leia um inteiro, além de determinar e imprimir se ele
- * é ímpar ou par. [Dica: utilize o operador de resto. Um número par é um múltiplo de 2. Qualquer múltiplo de 2
+ * Objetivo: 2.25 (Ãmpar ou par) Escreva um aplicativo que leia um inteiro, alÃ©m de determinar e imprimir se ele
+ * Ã© Ã­mpar ou par. [Dica: utilize o operador de resto. Um nÃºmero par Ã© um mÃºltiplo de 2. Qualquer mÃºltiplo de 2
  * deixa um resto 0 quando dividido por 2.]
  * 
  * Autor: Gustavo Alves

@@ -1,11 +1,11 @@
 /*
- * Objetivo     : 13.20 (Protetor de tela para um número aleatório de linhas) Modifique sua solução da Questão 13.19 para permitir que
- * o usuário insira o número de linhas aleatórias que deve ser desenhado antes de o aplicativo apagar seu próprio desenho e começar a 
- * desenhar linhas novamente. Utilize um JTextField para obter o valor. O usuário deve ser capaz de digitar um novo número no JTextField 
- * em qualquer momento durante a execução do programa. Utilize uma classe interna para realizar o tratamento de evento para o JTextField.
+ * Objetivo     : 13.20 (Protetor de tela para um nÃºmero aleatÃ³rio de linhas) Modifique sua soluÃ§Ã£o da QuestÃ£o 13.19 para permitir que
+ * o usuÃ¡rio insira o nÃºmero de linhas aleatÃ³rias que deve ser desenhado antes de o aplicativo apagar seu prÃ³prio desenho e comeÃ§ar a 
+ * desenhar linhas novamente. Utilize um JTextField para obter o valor. O usuÃ¡rio deve ser capaz de digitar um novo nÃºmero no JTextField 
+ * em qualquer momento durante a execuÃ§Ã£o do programa. Utilize uma classe interna para realizar o tratamento de evento para o JTextField.
  *
  * Programador  : Gustavo Alves - gustavo.almeida13@fatec.sp.gov.br
- * Data Criação : 7 de mar de 2019
+ * Data CriaÃ§Ã£o : 7 de mar de 2019
  */
 
 package ch13.ex13_20;

@@ -1,8 +1,9 @@
 /*
- * Objetivo: 2.17 (Aritmética, menor e maior) Escreva um aplicativo que insira três inteiros digitados pelo usuário e
- * exiba a soma, média, produto e os números menores e maiores. Utilize as técnicas mostradas na Figura 2.15. [Observação: 
- * o cálculo da média neste exercício deve resultar em uma representação de inteiro. Assim, se a soma dos valores for 7, a 
- * média deverá ser 2, não 2,3333...]
+ * Objetivo: 2.17 (AritmÃ©tica, menor e maior) Escreva um aplicativo que insira trÃªs
+ * inteiros digitados pelo usuÃ¡rio e exiba a soma, mÃ©dia, produto e os nÃºmeros menores
+ * e maiores. Utilize as tÃ©cnicas mostradas na Figura 2.15. [ObservaÃ§Ã£o:  o cÃ¡lculo da
+ * mÃ©dia neste exercÃ­cio deve resultar em uma representaÃ§Ã£o de inteiro. Assim, se a soma
+ * dos valores for 7, a mÃ©dia deverÃ¡ ser 2, nÃ£o 2,3333...]
  * 
  * Autor: Gustavo Alves
  */

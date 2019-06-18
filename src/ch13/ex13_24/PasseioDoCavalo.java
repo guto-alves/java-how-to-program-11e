@@ -1,8 +1,8 @@
 /*
- * Objetivo: 13.24 (Passeio do Cavalo) Crie uma versão gráfica do problema do Passeio do Cavalo (questões 7.22, 7.23 e 7.26). À medida que cada 
- * movimento é feito, a célula apropriada do tabuleiro deve ser atualizada com o número adequado do movimento. Se o resultado do programa é
+ * Objetivo: 13.24 (Passeio do Cavalo) Crie uma versÃ£o grÃ¡fica do problema do Passeio do Cavalo (questÃµes 7.22, 7.23 e 7.26). Ã€ medida que cada 
+ * movimento Ã© feito, a cÃ©lula apropriada do tabuleiro deve ser atualizada com o nÃºmero adequado do movimento. Se o resultado do programa Ã©
  * um passeio completo ou um passeio fechado, o programa deve exibir uma mensagem apropriada. Se quiser, utilize a classe Timer (veja
- * a Questão 13.19) para ajudar a animar o Passeio do Cavalo.
+ * a QuestÃ£o 13.19) para ajudar a animar o Passeio do Cavalo.
  * 
  * 7.22 (Passeio do cavalo) Um problema interessante para os fãs de xadrez é o problema do Passeio do Cavalo, originalmente proposto pelo
  * matemático Euler. A peça do cavalo pode mover-se em um tabuleiro vazio e tocar cada um dos 64 quadrados somente uma única vez? Aqui,
@@ -13,29 +13,29 @@
  * a) Desenhe um tabuleiro de xadrez oito por oito em uma folha de papel e tente o Passeio do Cavalo manualmente. Coloque um 1 no quadrado
  * inicial, um 2 no segundo quadrado, um 3 no terceiro e assim por diante. Antes de iniciar o passeio, estime até onde você chegará,
  * lembrando que um passeio completo consiste em 64 movimentos. Até onde você foi? Isso foi próximo de sua estimativa?
- * b ) Agora vamos desenvolver um aplicativo que moverá o cavalo pelo tabuleiro. O tabuleiro é representado por um array bidimensional
+ * b) Agora vamos desenvolver um aplicativo que moverá o cavalo pelo tabuleiro. O tabuleiro é representado por um array bidimensional
  * oito por oito board. Cada quadrado é inicializado como zero. Descrevemos cada um dos oito possíveis movimentos em termos de
  * seus componentes vertical e horizontal. Por exemplo, um movimento do tipo 0, como mostrado na Figura 7.30, consiste em mover
- * 8 dois quadrados horizontalmente para a direita e um quadrado verticalmente para cima. Um movimento do tipo 2 consiste em mover
+ * dois quadrados horizontalmente para a direita e um quadrado verticalmente para cima. Um movimento do tipo 2 consiste em mover
  * um quadrado horizontalmente para a esquerda e dois quadrados verticalmente para cima. Movimentos horizontais para a esquerda e
  * movimentos verticais para cima são indicados com números negativos. Os oitos movimentos podem ser descritos por dois arrays unidimensionais,
  * horizontal e vertical, como segue:
  * 
- * horizontal[0] = 2 vertical[0] = -1
- * horizontal[1] = 1 vertical[1] = -2
- * horizontal[2] = -1 vertical[2] = -2
- * horizontal[3] = -2 vertical[3] = -1
- * horizontal[4] = -2 vertical[4] = 1
- * horizontal[5] = -1 vertical[5] = 2
- * horizontal[6] = 1 vertical[6] = 2
- * horizontal[7] = 2 vertical[7] = 1
+ * 		horizontal[0] = 2 vertical[0] = -1
+ * 		horizontal[1] = 1 vertical[1] = -2
+ * 		horizontal[2] = -1 vertical[2] = -2
+ *		horizontal[3] = -2 vertical[3] = -1
+ *		horizontal[4] = -2 vertical[4] = 1
+ *		horizontal[5] = -1 vertical[5] = 2
+ * 		horizontal[6] = 1 vertical[6] = 2
+ *	    horizontal[7] = 2 vertical[7] = 1
  * 
  * Faça com que as variáveis currentRow e currentColumn indiquem, respectivamente, a linha e a coluna da posição atual
  * do cavalo. Para fazer um movimento do tipo moveNumber, em que moveNumber está entre 0 e 7, seu aplicativo deve utilizar as
  * instruções
  * 
- * currentRow += vertical[moveNumber];
- * currentColumn += horizontal[moveNumber];
+ * 		currentRow += vertical[moveNumber];
+ * 		currentColumn += horizontal[moveNumber];
  * 
  * Escreva um aplicativo para mover o cavalo pelo tabuleiro. Mantenha um contador que varia de 1 a 64. Registre a última contagem
  * em cada quadrado para o qual o cavalo se move. Teste cada movimento potencial para ver se o cavalo já visitou esse quadrado. Teste
@@ -191,7 +191,7 @@ public class PasseioDoCavalo extends JFrame implements KeyListener, ActionListen
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JFrame frame = new JFrame("Opções");
+				JFrame frame = new JFrame("OpÃ§Ãµes");
 
 				JPanel panelconfigButton = new JPanel(new FlowLayout());
 				panelconfigButton.setBackground(new Color(248, 190, 94));
@@ -318,7 +318,7 @@ public class PasseioDoCavalo extends JFrame implements KeyListener, ActionListen
 										if (++errorsCounter == 2) { // a cada dois movimentos errados exibe aviso
 											errorsCounter = 0;
 											JOptionPane.showMessageDialog(null,
-													"Ei, o cavalo só faz movimentos em forma de L.", "Aviso",
+													"Ei, o cavalo sÃ³ faz movimentos em forma de L.", "Aviso",
 													JOptionPane.INFORMATION_MESSAGE);
 
 										}
@@ -334,7 +334,7 @@ public class PasseioDoCavalo extends JFrame implements KeyListener, ActionListen
 							}
 
 						} else {
-							JOptionPane.showMessageDialog(null, "Clique no botão \"Jogar\" para começar o passeio!",
+							JOptionPane.showMessageDialog(null, "Clique no botÃ£o \"Jogar\" para comeÃ§ar o passeio!",
 									"Aviso", JOptionPane.INFORMATION_MESSAGE);
 
 						}
@@ -470,16 +470,13 @@ public class PasseioDoCavalo extends JFrame implements KeyListener, ActionListen
 				finishRide();
 
 			}
-
 		}
-
 	}
 
 	@Override
 	public void keyPressed(KeyEvent e) {
 		if ("F5" == KeyEvent.getKeyText(e.getKeyCode()))
 			reset();
-
 	}
 
 	@Override
@@ -490,7 +487,6 @@ public class PasseioDoCavalo extends JFrame implements KeyListener, ActionListen
 	public void keyTyped(KeyEvent e) {
 		if ("R".equals(String.valueOf(e.getKeyChar())))
 			reset();
-
 	}
 
 	public void reset() {
@@ -538,11 +534,11 @@ public class PasseioDoCavalo extends JFrame implements KeyListener, ActionListen
 		frame.setVisible(true);
 
 		JOptionPane.showMessageDialog(null,
-				"Um problema interessante para os fãs de xadrez é o problema do\n Passeio do Cavalo, originalmente proposto pelo matemático Euler. \n\nA peça do cavalo pode mover-se em um tabuleiro vazio e \ntocar cada um dos 64 quadrados somente uma única vez?",
+				"Um problema interessante para os fãs de xadrez é o problema do \nPasseio do Cavalo, originalmente proposto pelo matemático Euler. \n\nA peça do cavalo pode mover-se em um tabuleiro vazio e \ntocar cada um dos 64 quadrados somente uma única vez?",
 				"Sobre o Programa", JOptionPane.INFORMATION_MESSAGE);
 		JOptionPane.showMessageDialog(null,
 				"Clique no botão \"Jogar\" e depois sobre a casa \nque deseja começar o passeio, boa sorte!",
-				"Instrução", JOptionPane.INFORMATION_MESSAGE);
+				"Instruções", JOptionPane.INFORMATION_MESSAGE);
 
 	}
 

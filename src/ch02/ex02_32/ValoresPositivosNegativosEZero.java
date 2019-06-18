@@ -1,6 +1,6 @@
 /*
- * Objetivo: 2.32 (Valores negativos, positivos e zero) Escreva um programa que insira cinco números,
- * além de determinar e imprimir quantos negativos, quantos positivos e quantos zeros foram inseridos.
+ * Objetivo: 2.32 (Valores negativos, positivos e zero) Escreva um programa que insira cinco nÃºmeros,
+ * alÃ©m de determinar e imprimir quantos negativos, quantos positivos e quantos zeros foram inseridos.
  * 
  * Autor: Gustavo Alves
  */

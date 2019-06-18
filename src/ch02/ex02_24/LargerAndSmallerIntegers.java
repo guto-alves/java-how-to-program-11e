@@ -1,7 +1,7 @@
 /*
- * Objetivo: 2.24 (Inteiros maiores e menores) Escreva um aplicativo que leia cinco inteiros, além de determinar
- * e imprimir o maior e o menor inteiro no grupo. Utilize somente as técnicas de programação que você aprendeu 
- * neste capítulo.
+ * Objetivo: 2.24 (Inteiros maiores e menores) Escreva um aplicativo que leia cinco inteiros, alÃ©m de determinar
+ * e imprimir o maior e o menor inteiro no grupo. Utilize somente as tÃ©cnicas de programaÃ§Ã£o que vocÃª aprendeu 
+ * neste capÃ­tulo.
  * 
  * Autor: Gustavo Alves
  */
