@@ -4,9 +4,9 @@ Minhas soluções para os exercícios do livro Deitel & Deitel - Java How to Pro
 ### Chapter List (Updated as they are started)
 
 > - **Chapter 1**  - Introdução a computadores, internet e Java
-> - **Chapter 2**  - [Introdução a aplicativos Java – entrada/saída e operadores] (https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch02)
+> - **Chapter 2**  - [Introdução a aplicativos Java – entrada/saída e operadores](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch02)
 > - **Chapter 3**  - Introdução a classes, objetos, métodos e strings
-> - **Chapter 4**  - [Instruções de controle: parte 1; operadores de atribuição ++ e --] (https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch04)
+> - **Chapter 4**  - [Instruções de controle: parte 1; operadores de atribuição ++ e --](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch04)
 > - **Chapter 5**  - [Instruções de controle: parte 2; operadores lógicos](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch05)
 > - **Chapter 6**  - [Métodos: um exame mais profundo](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch06)
 > - **Chapter 7**  - Arrays e ArrayLists
