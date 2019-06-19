@@ -1,7 +1,5 @@
 package ch17.ex17_09;
 
-// Fig. 17.17: StreamOfLines.java
-// Counting word occurrences in a text file.
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -10,47 +8,19 @@ import java.util.TreeMap;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-public class StreamOfLines
-{
-   public static void main(String[] args) throws IOException
-   {
-      // Regex that matches one or more consecutive whitespace characters
-      Pattern pattern = Pattern.compile("\\s+"); 
+public class StreamOfLines {
+	public static void main(String[] args) throws IOException {
+		Pattern pattern = Pattern.compile("");
 
-      // count occurrences of each word in a Stream<String> sorted by word
-      Map<String, Long> wordCounts = 
-         Files.lines(Paths.get("Chapter2Paragraph.txt"))
-              .map(line -> line.replaceAll("(?!')\\p{P}", ""))
-              .flatMap(line -> pattern.splitAsStream(line))
-              .collect(Collectors.groupingBy(String::toLowerCase,
-                 TreeMap::new, Collectors.counting()));
-      
-      // display the words grouped by starting letter
-      wordCounts.entrySet()
-         .stream()
-         .collect(
-            Collectors.groupingBy(entry -> entry.getKey().charAt(0), 
-               TreeMap::new, Collectors.toList()))
-         .forEach((letter, wordList) -> 
-            { 
-               System.out.printf("%n%C%n", letter);
-               wordList.stream().forEach(word -> System.out.printf(
-                  "%13s: %d%n", word.getKey(), word.getValue()));
-            });
-   }
-} // end class StreamOfLines
+		Map<String, Long> letterCounts = Files.lines(Paths.get("./src/ch17/ex17_09/Chapter2Paragraph.txt"))
+				.map(line -> line.replaceAll("\\p{P}", ""))
+				.flatMap(line -> pattern.splitAsStream(line))
+				.collect(Collectors.groupingBy(String::toUpperCase, TreeMap::new, Collectors.counting()));
 
-/**************************************************************************
- * (C) Copyright 1992-2014 by Deitel & Associates, Inc. and               *
- * Pearson Education, Inc. All Rights Reserved.                           *
- *                                                                        *
- * DISCLAIMER: The authors and publisher of this book have used their     *
- * best efforts in preparing the book. These efforts include the          *
- * development, research, and testing of the theories and programs        *
- * to determine their effectiveness. The authors and publisher make       *
- * no warranty of any kind, expressed or implied, with regard to these    *
- * programs or to the documentation contained in these books. The authors *
- * and publisher shall not be liable in any event for incidental or       *
- * consequential damages in connection with, or arising out of, the       *
- * furnishing, performance, or use of these programs.                     *
- *************************************************************************/
+		letterCounts.entrySet().stream()
+				.collect(Collectors.groupingBy(entry -> entry.getKey().charAt(0), TreeMap::new, Collectors.toList()))
+				.forEach((letter, wordList) -> {
+					wordList.stream().forEach(word -> System.out.printf("%s: %d%n", word.getKey(), word.getValue()));
+				});
+	}
+}
