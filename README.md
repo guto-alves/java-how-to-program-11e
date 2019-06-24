@@ -9,7 +9,7 @@ Minhas soluções para os exercícios do livro Deitel & Deitel - Java How to Pro
 > - **Chapter 4**  - [Instruções de controle: parte 1; operadores de atribuição ++ e --](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch04)
 > - **Chapter 5**  - [Instruções de controle: parte 2; operadores lógicos](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch05)
 > - **Chapter 6**  - [Métodos: um exame mais profundo](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch06)
-> - **Chapter 7**  - Arrays e ArrayLists
+> - **Chapter 7**  - [Arrays e ArrayLists](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch07)
 > - **Chapter 8**  - Classes e objetos: um exame mais profundo
 > - **Chapter 9**  - Programação orientada a objetos: herança
 > - **Chapter 10** - Programação orientada a objetos: polimorfismo e interfaces
