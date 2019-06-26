@@ -21,7 +21,7 @@ Minhas soluções para os exercícios do livro Deitel & Deitel - Java How to Pro
 > - **Chapter 16** - [Coleções genéricas](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch16)
 > - **Chapter 17** - [Lambdas e fluxos Java SE 8](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch17)
 > - **Chapter 18** - [Recursão](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch18)
-> - **Chapter 19** - Pesquisa, classificação e Big O
+> - **Chapter 19** - [Pesquisa, classificação e Big O](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch19)
 > - **Chapter 20** - Classes e métodos genéricos
 > - **Chapter 21** - Estruturas de dados genéricas personalizadas
 > - **Chapter 22** - Componentes GUI: parte 2
