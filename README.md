@@ -5,12 +5,12 @@ Minhas soluções para os exercícios do livro Deitel & Deitel - Java How to Pro
 
 > - **Chapter 1**  - Introdução a computadores, internet e Java
 > - **Chapter 2**  - [Introdução a aplicativos Java – entrada/saída e operadores](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch02)
-> - **Chapter 3**  - Introdução a classes, objetos, métodos e strings
+> - **Chapter 3**  - [Introdução a classes, objetos, métodos e strings](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch03)
 > - **Chapter 4**  - [Instruções de controle: parte 1; operadores de atribuição ++ e --](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch04)
 > - **Chapter 5**  - [Instruções de controle: parte 2; operadores lógicos](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch05)
 > - **Chapter 6**  - [Métodos: um exame mais profundo](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch06)
 > - **Chapter 7**  - [Arrays e ArrayLists](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch07)
-> - **Chapter 8**  - Classes e objetos: um exame mais profundo
+> - **Chapter 8**  - [Classes e objetos: um exame mais profundo](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch08)
 > - **Chapter 9**  - Programação orientada a objetos: herança
 > - **Chapter 10** - Programação orientada a objetos: polimorfismo e interfaces
 > - **Chapter 11** - Tratamento de exceção: um exame mais profundo
