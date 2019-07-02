@@ -18,7 +18,7 @@
  * de uma passagem, o maior elemento estará no último índice. Depois de
  * duas passagens, os dois maiores elementos estarão nos dois últimos
  * índices. Explique por que a classificação por borbulhamento é um
- * algoritmo O(n2).
+ * algoritmo O(n²).
  * 
  * Autor: Gustavo Alves
  */

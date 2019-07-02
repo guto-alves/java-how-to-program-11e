@@ -1,6 +1,6 @@
 /*
- * Objetivo: 16.13 (Eliminação de duplicatas) Escreva um programa que lê em uma série nomes e 
- * elimina duplicatas armazenando-os em um Set. Permita que o usuário procure um primeiro nome.
+ * Objetivo: 16.13 (EliminaÃ§Ã£o de duplicatas) Escreva um programa que lÃª em uma sÃ©rie nomes e 
+ * elimina duplicatas armazenando-os em um Set. Permita que o usuÃ¡rio procure um primeiro nome.
  * 
  * Autor: Gustavo Alves
  */
@@ -21,7 +21,7 @@ public class EliminacaoDeDuplicatas {
 
 		List<String> list = new ArrayList<String>();
 
-		System.out.printf("%s%n%s%n", "Insira uma série de nomes.",
+		System.out.printf("%s%n%s%n", "Insira uma sÃ©rie de nomes.",
 				"Digite o indicator de fim do arquivo (<Ctrl> z) para finalizar a entrada.");
 
 		while (input.hasNext())
@@ -35,10 +35,9 @@ public class EliminacaoDeDuplicatas {
 	public static void eliminarDuplicatas(Collection<String> values) {
 		Set<String> set = new HashSet<String>(values);
 
-		System.out.print("Nomes não duplicados: ");
+		System.out.print("Nomes nÃ£o duplicados: ");
 
 		for (String value : set)
 			System.out.printf("%s ", value);
 	}
-
 }
