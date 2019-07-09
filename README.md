@@ -11,7 +11,7 @@ Minhas soluções para os exercícios do livro Deitel & Deitel - Java How to Pro
 > - **Chapter 6**  - [Métodos: um exame mais profundo](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch06)
 > - **Chapter 7**  - [Arrays e ArrayLists](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch07)
 > - **Chapter 8**  - [Classes e objetos: um exame mais profundo](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch08)
-> - **Chapter 9**  - Programação orientada a objetos: herança
+> - **Chapter 9**  - [Programação orientada a objetos: herança](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch09)
 > - **Chapter 10** - Programação orientada a objetos: polimorfismo e interfaces
 > - **Chapter 11** - Tratamento de exceção: um exame mais profundo
 > - **Chapter 12** - [Componentes GUI: parte 1](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch12)
