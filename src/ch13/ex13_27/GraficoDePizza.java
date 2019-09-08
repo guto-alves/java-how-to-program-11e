@@ -13,41 +13,106 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.geom.Arc2D;
+import java.util.ArrayList;
+import java.util.List;
 
-import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class GraficoDePizza extends JPanel {
+	private int gX;
+	private int gY;
+	private int gWidth;
+	private int gHeight;
+
+	private List<Piece> pieces;
+
+	private double sum = 0;
+
+	public GraficoDePizza() {
+		this(new ArrayList<>(), 0, 0, 200, 200, Color.WHITE);
+	}
+
+	public GraficoDePizza(List<Piece> pieces, int gX, int gY, int gWidth, int gHeight, Color backgroundColor) {
+		this.pieces = pieces;
+		this.gX = gX;
+		this.gY = gY;
+		this.gWidth = gWidth;
+		this.gHeight = gHeight;
+		setBackground(backgroundColor);
+	}
 
 	@Override
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D) g;
 
-		g2d.setPaint(Color.RED);
-		g2d.fill(new Arc2D.Double(50, 10, 50, 50, 0, 57, Arc2D.PIE));
+		double start = 0;
+		double extent = 0;
 
-		g2d.setPaint(Color.YELLOW);
-		g2d.fill(new Arc2D.Double(50, 10, 50, 50, 57, 90, Arc2D.PIE));
+		for (Piece piece : pieces)
+			sum += piece.getValue();
 
-		g2d.setPaint(Color.GREEN);
-		g2d.fill(new Arc2D.Double(50, 10, 50, 50, 180, 90, Arc2D.PIE));
+		for (int i = 0; i < pieces.size(); i++) {
+			double percentage = pieces.get(i).getValue() / sum * 360;
 
-		g2d.setPaint(Color.BLUE);
-		g2d.fill(new Arc2D.Double(50, 10, 50, 50, 0, -90, Arc2D.PIE));
+			pieces.get(i).setPercentage(percentage);
+			extent = percentage;
 
+			g2d.setPaint(pieces.get(i).getColor());
+
+			g2d.fill(new Arc2D.Double(gX, gY, gWidth, gHeight, start, extent, Arc2D.PIE));
+
+			start += extent;
+		}
+
+		sum = 0;
 	}
 
-	public static void main(String[] args) {
-		JFrame frame = new JFrame("Gráfico de Pizza");
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-		GraficoDePizza draw = new GraficoDePizza();
-		frame.add(draw);
-
-		frame.setLocationRelativeTo(null);
-		frame.setSize(300, 150);
-		frame.setVisible(true);
+	public void addPiece(Piece piece) {
+		pieces.add(piece);
 	}
 
+	public void clearValues() {
+		pieces.clear();
+	}
+
+	public List<Piece> getPieces() {
+		return pieces;
+	}
+
+	public void setValues(List<Piece> pieces) {
+		this.pieces = pieces;
+	}
+
+	public int getgX() {
+		return gX;
+	}
+
+	public void setgX(int gX) {
+		this.gX = gX;
+	}
+
+	public int getgY() {
+		return gY;
+	}
+
+	public void setgY(int gY) {
+		this.gY = gY;
+	}
+
+	public int getgWidth() {
+		return gWidth;
+	}
+
+	public void setgWidth(int gWidth) {
+		this.gWidth = gWidth;
+	}
+
+	public int getgHeight() {
+		return gHeight;
+	}
+
+	public void setgHeight(int gHeight) {
+		this.gHeight = gHeight;
+	}
 }
