@@ -1,16 +1,21 @@
 package ch13.ex13_27;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.border.TitledBorder;
 
 public class GraficoDePizzaFrame extends JFrame {
 	private GraficoDePizza chart;
@@ -20,13 +25,14 @@ public class GraficoDePizzaFrame extends JFrame {
 	public GraficoDePizzaFrame() {
 		super("Gráfico de Pizza");
 
-		chart = new GraficoDePizza();
+		chart = new GraficoDePizza(260, 90, 200, 200);
 
 		for (int i = 0; i < 4; i++)
-			chart.addPiece(new Piece(1));
+			chart.addPiece(new Piece(0, Color.BLUE));
 
 		JPanel controlPanel = new JPanel();
-		controlPanel.setLayout(new GridLayout(3, 1));
+		controlPanel.setBorder(new TitledBorder("Ajustar Gráfico"));
+		controlPanel.setLayout(new GridLayout(4, 1));
 
 		JPanel valuesPanel = new JPanel();
 		valuesPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
@@ -35,7 +41,7 @@ public class GraficoDePizzaFrame extends JFrame {
 		JTextField[] valuesJTextFields = new JTextField[4];
 
 		for (; counter < 4; counter++) {
-			valuesJTextFields[counter] = new JTextField("1");
+			valuesJTextFields[counter] = new JTextField();
 			valuesJTextFields[counter].setHorizontalAlignment(JTextField.CENTER);
 			valuesJTextFields[counter].setColumns(5);
 			valuesPanel.add(valuesJTextFields[counter]);
@@ -44,41 +50,85 @@ public class GraficoDePizzaFrame extends JFrame {
 		valuesJTextFields[0].addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyReleased(KeyEvent e) {
-				Piece piece = chart.getPieces().get(0);
-				piece.setValue(getInput(valuesJTextFields[0]));
-
-				chart.getPieces().set(0, piece);
+				chart.setPiece(0, getInput(valuesJTextFields[0]), null);
 				chart.repaint();
 			}
 		});
 		valuesJTextFields[1].addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyReleased(KeyEvent e) {
-				Piece piece = chart.getPieces().get(1);
-				piece.setValue(getInput(valuesJTextFields[1]));
-
-				chart.getPieces().set(1, piece);
+				chart.setPiece(1, getInput(valuesJTextFields[1]), null);
 				chart.repaint();
 			}
 		});
 		valuesJTextFields[2].addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyReleased(KeyEvent e) {
-				Piece piece = chart.getPieces().get(2);
-				piece.setValue(getInput(valuesJTextFields[2]));
-
-				chart.getPieces().set(2, piece);
+				chart.setPiece(2, getInput(valuesJTextFields[2]), null);
 				chart.repaint();
 			}
 		});
 		valuesJTextFields[3].addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyReleased(KeyEvent e) {
-				Piece piece = chart.getPieces().get(3);
-				piece.setValue(getInput(valuesJTextFields[3]));
-
-				chart.getPieces().set(3, piece);
+				chart.setPiece(3, getInput(valuesJTextFields[3]), null);
 				chart.repaint();
+			}
+		});
+
+		JPanel colorsJPanel = new JPanel();
+		colorsJPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
+		colorsJPanel.add(new JLabel("Cores: "));
+
+		String[] colorsNames = { "Azul", "Vermelho", "Verde", "Ciano", "Amarelo", "Rosa", "Laranja", "Preto" };
+		Color[] colors = { Color.BLUE, Color.RED, Color.GREEN, Color.CYAN, Color.YELLOW, Color.PINK, Color.ORANGE,
+				Color.BLACK };
+
+		JComboBox<String>[] colorsComboBoxs = new JComboBox[4];
+
+		for (int i = 0; i < colorsComboBoxs.length; i++) {
+			colorsComboBoxs[i] = new JComboBox<>(colorsNames);
+			colorsJPanel.add(colorsComboBoxs[i]);
+		}
+
+		colorsComboBoxs[0].addItemListener(new ItemListener() {
+
+			@Override
+			public void itemStateChanged(ItemEvent e) {
+				if (e.getStateChange() == ItemEvent.SELECTED) {
+					chart.setPiece(0, -1, colors[colorsComboBoxs[0].getSelectedIndex()]);
+					chart.repaint();
+				}
+			}
+		});
+		colorsComboBoxs[1].addItemListener(new ItemListener() {
+
+			@Override
+			public void itemStateChanged(ItemEvent e) {
+				if (e.getStateChange() == ItemEvent.SELECTED) {
+					chart.setPiece(1, -1, colors[colorsComboBoxs[1].getSelectedIndex()]);
+					chart.repaint();
+				}
+			}
+		});
+		colorsComboBoxs[2].addItemListener(new ItemListener() {
+
+			@Override
+			public void itemStateChanged(ItemEvent e) {
+				if (e.getStateChange() == ItemEvent.SELECTED) {
+					chart.setPiece(2, -1, colors[colorsComboBoxs[2].getSelectedIndex()]);
+					chart.repaint();
+				}
+			}
+		});
+		colorsComboBoxs[3].addItemListener(new ItemListener() {
+
+			@Override
+			public void itemStateChanged(ItemEvent e) {
+				if (e.getStateChange() == ItemEvent.SELECTED) {
+					chart.setPiece(3, -1, colors[colorsComboBoxs[3].getSelectedIndex()]);
+					chart.repaint();
+				}
 			}
 		});
 
@@ -136,6 +186,7 @@ public class GraficoDePizzaFrame extends JFrame {
 		xAndYPanel.add(yJTextField);
 
 		controlPanel.add(valuesPanel);
+		controlPanel.add(colorsJPanel);
 		controlPanel.add(xAndYPanel);
 		controlPanel.add(widthAndHeightPanel);
 
@@ -152,7 +203,7 @@ public class GraficoDePizzaFrame extends JFrame {
 		GraficoDePizzaFrame application = new GraficoDePizzaFrame();
 		application.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		application.setSize(new Dimension(600, 600));
+		application.setSize(new Dimension(800, 600));
 		application.setLocationRelativeTo(null);
 		application.setVisible(true);
 	}

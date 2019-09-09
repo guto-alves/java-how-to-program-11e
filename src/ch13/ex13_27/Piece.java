@@ -9,6 +9,10 @@ public class Piece {
 	private double percentage;
 	private Color color;
 
+	public Piece() {
+		this(0);
+	}
+
 	public Piece(double value) {
 		this.value = value;
 		this.color = new Color(random.nextInt(256), random.nextInt(256), random.nextInt(256));

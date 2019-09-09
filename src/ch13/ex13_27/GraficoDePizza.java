@@ -32,6 +32,10 @@ public class GraficoDePizza extends JPanel {
 		this(new ArrayList<>(), 0, 0, 200, 200, Color.WHITE);
 	}
 
+	public GraficoDePizza(int gX, int gY, int gWidth, int gHeight) {
+		this(new ArrayList<>(), gX, gY, gWidth, gHeight, Color.WHITE);
+	}
+
 	public GraficoDePizza(List<Piece> pieces, int gX, int gY, int gWidth, int gHeight, Color backgroundColor) {
 		this.pieces = pieces;
 		this.gX = gX;
@@ -66,6 +70,26 @@ public class GraficoDePizza extends JPanel {
 		}
 
 		sum = 0;
+	}
+
+	public void setPiece(int index, double value, Color color) {
+		if (index < 0 || index >= pieces.size())
+			throw new IllegalArgumentException("Length = " + pieces.size() + ", Index = " + index);
+
+		Piece oldPiece = pieces.get(index);
+		Piece newPiece = new Piece();
+
+		if (value >= 0)
+			newPiece.setValue(value);
+		else
+			newPiece.setValue(oldPiece.getValue());
+
+		if (color != null)
+			newPiece.setColor(color);
+		else
+			newPiece.setColor(oldPiece.getColor());
+
+		pieces.set(index, newPiece);
 	}
 
 	public void addPiece(Piece piece) {
