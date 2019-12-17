@@ -1,6 +1,6 @@
-# Java How to Program 10th Edition
+# Java How to Program, 11/e (Early Objects)
 
- My solutions to exercises in the book Java How to Program 10th Edition.
+My solutions to exercises in the book Deitel & Deitel - Java How to Program, 11/e (Early Objects).
 
 ### Chapter List (Updated as they are started)
 
