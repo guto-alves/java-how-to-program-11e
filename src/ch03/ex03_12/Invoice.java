@@ -1,39 +1,35 @@
 /*
- * Objetivo: 3.12 (Classe Invoice) Crie uma classe chamada Invoice para que 
- * uma loja de suprimentos de informática a utilize para representar uma 
- * fatura de um item vendido nela. Uma Invoice (fatura) deve incluir quatro 
- * partes das informações como variáveis de instância — o número 
- * (tipo String), a descrição (tipo String), a quantidade comprada de um 
- * item (tipo int) e o preço por item (double). Sua classe deve ter um 
- * construtor que inicializa as quatro variáveis de instância. Forneça um
- * método set e um get para cada variável de instância. Além disso, forneça 
- * um método chamado getInvoiceAmount que calcula o valor de fatura (isto é, 
- * multiplica a quantidade pelo preço por item) e depois retorna esse valor 
- * como double. Se a quantidade não for positiva, ela deve ser configurada 
- * como 0. Se o preço por item não for positivo, ele deve ser configurado 
- * como 0.0. Escreva um aplicativo de teste chamado InvoiceTest que 
- * demonstra as capacidades da classe Invoice.
- * 
- * Autor: Gustavo Alves
- */
+ * 3.12 (Invoice Class) Create a class called Invoice that a hardware
+store might use to represent an invoice for an item sold at the store. An
+Invoice should include four pieces of information as instance variables�a
+part number (type String), a part description (type String), a quantity
+of the item being purchased (type int) and a price per item (double).
+Your class should have a constructor that initializes the four instance
+variables. Provide a set and a get method for each instance variable. In
+addition, provide a method named getInvoiceAmount that calculates
+the invoice amount (i.e., multiplies the quantity by the price per item),
+then returns the amount as a double value. If the quantity is not positive,
+it should be set to 0. If the price per item is not positive, it should be set to
+0.0. Write a test app named InvoiceTest that demonstrates class
+Invoice�s capabilities. */
 
 package ch03.ex03_12;
 
 public class Invoice {
 	private String number;
 	private String description;
-	private int quantityPurchased;
+	private int quantity;
 	private double pricePerItem;
 
-	public Invoice(String number, String description, int quantityPurchased, double pricePerItem) {
-		this.setNumber(number);
-		this.setDescription(description);
-		this.setQuantityPurchased(quantityPurchased);
-		this.setPricePerItem(pricePerItem);
+	public Invoice(String number, String description, int quantity, double pricePerItem) {
+		this.number = number;
+		this.description = description;
+		this.quantity = quantity;
+		this.pricePerItem = pricePerItem;
 	}
 
 	public double getInvoiceAmount() {
-		return quantityPurchased * pricePerItem;
+		return quantity * pricePerItem;
 	}
 
 	public String getNumber() {
@@ -53,11 +49,11 @@ public class Invoice {
 	}
 
 	public int getQuantityPurchased() {
-		return quantityPurchased;
+		return quantity;
 	}
 
-	public void setQuantityPurchased(int quantityPurchased) {
-		this.quantityPurchased = quantityPurchased < 0 ? 0 : quantityPurchased;
+	public void setQuantity(int quantity) {
+		this.quantity = quantity < 0 ? 0 : quantity;
 	}
 
 	public double getPricePerItem() {

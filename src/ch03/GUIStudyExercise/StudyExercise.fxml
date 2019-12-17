@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="800.0" spacing="5.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Label text="Eiffel Tower - Paris">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Eiffel%20Tower%20-%20Paris.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Label text="Big Ben - London">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+               <image>
+                  <Image url="@Big%20Ben%20-%20London.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Label text="Manhattan Bridge - New York">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Manhattan%20Bridge%20-%20New%20York.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Label text="Kerry Park - Seattle">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Kerry%20Park%20-%20Seattle.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets left="5.0" right="5.0" />
+   </padding>
+</HBox>
