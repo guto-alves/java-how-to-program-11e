@@ -1,9 +1,9 @@
 /*
- * Objetivo: 2.16 (Comparando inteiros) Escreva um aplicativo que solicite ao usuário
- * inserir dois inteiros, obtenha dele esses números e exiba o número maior seguido
- * pelas palavras “is larger". Se os números forem iguais, imprima a mensagem 
- * “These numbers are equal". Utilize as técnicas mostradas na Figura 2.15.
- * 
+ *2.16 (Comparing Integers) Write an application that asks the user to enter
+ * two integers, obtains them from the user and displays the larger number
+ * followed by the words "is larger". If the numbers are equal, print the
+ * message "These numbers are equal". Use the techniques shown in Fig. 2.15.
+ *
  * Autor: Gustavo Alves
  */
 

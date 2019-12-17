@@ -1,9 +1,8 @@
 /*
- * Objetivo: 2.25 (Ímpar ou par) Escreva um aplicativo que leia um inteiro, além de determinar e imprimir se ele
- * é ímpar ou par. [Dica: utilize o operador de resto. Um número par é um múltiplo de 2. Qualquer múltiplo de 2
- * deixa um resto 0 quando dividido por 2.]
- * 
- * Autor: Gustavo Alves
+ * 2.25 (Odd or Even) Write an application that reads an integer and
+ * determines and prints whether it�s odd or even. [Hint: Use the remainder
+ * operator. An even number is a multiple of 2. Any multiple of 2 leaves a
+ * remainder of 0 when divided by 2.]
  */
 
 package ch02.ex02_25;
@@ -21,7 +20,8 @@ public class OddOrEven {
 
 		if (number % 2 == 0)
 			System.out.printf("%d is even", number);
-		if (number % 2 != 0)
+
+		if (number % 2 == 1)
 			System.out.printf("%d is odd", number);
 	}
 }

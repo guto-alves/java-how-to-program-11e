@@ -1,9 +1,9 @@
 /*
- * Objetivo: 2.15 (Aritmética) Escreva um aplicativo que solicite ao usuário inserir dois
- * inteiros, obtenha dele esses números e imprima sua soma, produto, diferença e quociente
- * (divisão). Utilize as técnicas mostradas na Figura 2.7.
+ * 2.15 (Arithmetic) Write an application that asks the user to enter two
+ * integers, obtains them from the user and prints their sum, product,
+ * difference and quotient (division). Use the techniques shown in Fig. 2.7.
  * 
- * Autor: Gustavo Alves
+ * Author: Gustavo Alves
  */
 
 package ch02.ex02_15;
