@@ -29,7 +29,7 @@ My solutions to exercises in the book Deitel & Deitel - Java How to Program, 11/
 > - **Chapter 23** - [Concurrency](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch23)
 > - **Chapter 24** - [Accessing Databases with JDBC](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch24)
 > - **Chapter 25** - Introduction to JShell: Java 9’s REPL
-> - **Chapter 26** - [Swing GUI Components: Part 1]((https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch26))
+> - **Chapter 26** - [Swing GUI Components: Part 1](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch26)
 > - **Chapter 27** - [Graphics and Java 2D](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch27)
 > - **Chapter 28** - Networking
 > - **Chapter 29** - Java Persistence API (JPA)
