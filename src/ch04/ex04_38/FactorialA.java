@@ -1,10 +1,7 @@
-/*
- * Objetivo: a) Escreva um aplicativo que lê um inteiro não negativo, calcula e imprime seu fatorial.
- * 
- * Autor: Gustavo Alves
- */
+/* 1. Write an application that reads a nonnegative integer and
+computes and prints its factorial. */
 
-package ch04.ex04_37;
+package ch04.ex04_38;
 
 import java.util.Scanner;
 
@@ -20,7 +17,7 @@ public class FactorialA {
 		int aux = number;
 
 		int factorial = 1;
-		while (number > 0) {
+		while (number > 1) {
 			factorial *= number;
 			number--;
 		}

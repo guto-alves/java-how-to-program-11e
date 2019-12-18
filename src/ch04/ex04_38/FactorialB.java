@@ -1,12 +1,10 @@
-/*
- * Objetivo: b) Escreva um aplicativo que estima o valor da constante matemática (e) utilizando a fórmula a seguir. 
- * Permita ao usuário inserir o número de termos a calcular.
- *		 e  = 1 + (1 / 1!) + (1 / 2!) + (1 / 3!) + ...
- * 
- * Autor: Gustavo Alves
+/* Write an application that estimates the value of the mathematical
+constant e by using the following formula. Allow the user to
+enter the number of terms to calculate.
+ 		 e  = 1 + (1 / 1!) + (1 / 2!) + (1 / 3!) + ...
  */
 
-package ch04.ex04_37;
+package ch04.ex04_38;
 
 import java.util.Scanner;
 
@@ -21,20 +19,21 @@ public class FactorialB {
 		numberOfTerms = scanner.nextInt();
 		scanner.close();
 
-		double result = 1;
-		int counter = 1;
+		double result = 0;
+		int termsCounter = 0;
 
-		while (counter <= numberOfTerms) {
+		while (termsCounter < numberOfTerms) {
 
-			int auxCounter = counter;
+			int auxCounter = termsCounter;
 			double factorial = 1;
-			while (auxCounter > 0) {
+			while (auxCounter > 1) {
 				factorial *= auxCounter;
 				auxCounter--;
 			}
 
 			result += 1 / factorial;
-			counter++;
+
+			termsCounter++;
 		}
 
 		System.out.printf("e = %f", result);

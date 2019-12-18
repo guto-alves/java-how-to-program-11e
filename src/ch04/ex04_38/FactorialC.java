@@ -1,12 +1,10 @@
-/*
- * Objetivo: c) Escreva um aplicativo que computa o valor de e x utilizando a fórmula a seguir. 
- * Permita ao usuário inserir o número de termos a calcular.
- *  e^x = 1 + (x / 1!) + (x² / 2!) + (x³ / 3!) + ...
- * 
- * Autor: Gustavo Alves
+/* Write an application that computes the value of e^x by using the
+following formula. Allow the user to enter the number of terms to
+calculate.
+   		e^x = 1 + (x / 1!) + (x² / 2!) + (x³ / 3!) + ...
  */
 
-package ch04.ex04_37;
+package ch04.ex04_38;
 
 import java.util.Scanner;
 
