@@ -1,17 +1,15 @@
-/*
- * Objetivo: 6.18 (Exibindo um quadrado de asteriscos) Escreva um método squareOfAsterisks
- * que exibe um quadrado sólido (o mesmo número de linhas e colunas) de asteriscos cujo lado
- * é especificado no parâmetro inteiro side. Por exemplo, se side for 4, o método deverá exibir
- * 
- *   ****
- *   ****
- *	 ****
- *	 ****
- * Incorpore esse método a um aplicativo que lê um valor inteiro para side a partir da entrada
- * fornecida pelo usuário e gera saída dos asteriscos com o método squareOfAsterisks.
- * 
- * Autor: Gustavo Alves
- */
+/* 6.18 (Displaying a Square of Asterisks)Write a method
+squareOfAsterisks that displays a solid square (the same number of
+rows and columns) of asterisks whose side is specified in integer
+parameter side. For example, if side is 4, the method should display
+  
+    ****
+    ****
+ 	****
+ 	****
+Incorporate this method into an application that reads an integer value for
+side from the user and outputs the asterisks with the
+squareOfAsterisks method. */
 
 package ch06.ex06_18;
 
@@ -23,21 +21,18 @@ public class SquareOfAsterisks {
 		Scanner scanner = new Scanner(System.in);
 
 		System.out.print("Enter the side of square: ");
-		squareOfAsterisks(scanner.nextInt());
-
+		int side = scanner.nextInt();
 		scanner.close();
+
+		squareOfAsterisks(side);
 	}
 
 	public static void squareOfAsterisks(int side) {
-		String result = "";
-
 		for (int i = 0; i < side; i++) {
 			for (int j = 0; j < side; j++)
-				result += "*";
+				System.out.print("*");
 
-			result += "\n";
+			System.out.println();
 		}
-
-		System.out.println(result);
 	}
 }

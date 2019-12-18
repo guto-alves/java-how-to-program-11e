@@ -1,18 +1,22 @@
-/*
- * Objetivo: 6.21 (Separando dígitos) Escreva métodos que realizam cada uma das seguintes tarefas:
+/* 6.21 (Separating Digits)Write methods that accomplish each of the
+following tasks:
 
- * 	a) Calcule a parte inteiro do quociente quando o inteiro a é dividido pelo inteiro b.
- * 	b) Calcule o resto inteiro quando o inteiro a é dividido por inteiro b.
- * 	c) Utilize métodos desenvolvidos nas partes (a) e (b) para escrever um método displayDigits
- *     que recebe um inteiro entre 1 e 99999 e o exibe como uma sequência de dígitos, separando
- *     cada par de dígitos por dois espaços. Por exemplo, o inteiro 4562 deve aparecer como 
- *     4  5  6  2
- * 		
- * Incorpore os métodos em um aplicativo que insere um número inteiro e chama displayDigits 
- * passando para o método o número inteiro inserido. Exiba os resultados.
- * 
- * Autor: Gustavo Alves
- */
+1. Calculate the integer part of the quotient when integer a is
+divided by integer b.
+
+2. Calculate the integer remainder when integer a is divided by
+integer b.
+
+3. Use the methods developed in parts (a) and (b) to write a method
+displayDigits that receives an integer between 1 and
+99999 and displays it as a sequence of digits, separating each
+pair of digits by two spaces. For example, the integer 4562
+should appear as
+		4  5  6  2
+
+Incorporate the methods into an application that inputs an integer
+and calls displayDigits by passing the method the integer
+entered. Display the results. */
 
 package ch06.ex06_21;
 

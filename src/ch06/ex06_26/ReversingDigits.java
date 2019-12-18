@@ -1,11 +1,7 @@
-/*
- * Objetivo: 6.26 (Invertendo dígitos) Escreva um método que recebe um valor inteiro e retorna
- * o número com seus dígitos invertidos. Por exemplo, dado o número 7.631, o método deve retornar
- * 1.367. Incorpore o método a um aplicativo que lê um valor a partir da entrada fornecida pelo
- * usuário e exibe o resultado.
- * 
- * Autor: Gustavo Alves
- */
+/* 6.26 (Reversing Digits) Write a method that takes an integer value and
+returns the number with its digits reversed. For example, given the number
+7631, the method should return 1367. Incorporate the method into an
+application that reads a value from the user and displays the result. */
 
 package ch06.ex06_26;
 

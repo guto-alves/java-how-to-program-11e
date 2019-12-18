@@ -1,9 +1,6 @@
-/*
- * Objetivo: 6.20 (Área de círculo) Escreva um aplicativo que solicita ao usuário o raio de um círculo e utiliza
- * um método chamado circleArea para calcular a área do círculo.
- * 
- * Autor: Gustavo Alves
- */
+/* 6.20 (Circle Area) Write an application that prompts the user for the
+radius of a circle and uses a method called circleArea to calculate the
+area of the circle. */
 
 package ch06.ex06_20;
 
@@ -14,7 +11,7 @@ public class CircleArea {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 
-		System.out.print("Enter radius of a circle: ");
+		System.out.print("Enter the radius of a circle: ");
 		double radius = scanner.nextDouble();
 
 		System.out.printf("Circle area is %,.2f cm²", circleArea(radius));

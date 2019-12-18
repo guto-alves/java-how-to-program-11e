@@ -1,21 +1,19 @@
-/*
- * Objetivo: 5.13 (Fatoriais) Fatoriais costumam ser utilizados em problemas de probabilidade. O fatorial de um inteiro positivo
- * n (escrito como n! e pronunciado como “fatorial de n”) é igual ao produto dos números inteiros positivos de 1 a n. Escreva um
- * aplicativo que calcula os fatoriais de 1 a 20. Utilize o tipo long. Exiba os resultados em formato tabular. Que dificuldade
- * poderia impedir você de calcular o fatorial de 100?
- * 
- * Autor: Gustavo Alves
- */
+/* 5.13 (Factorials) Factorials are used frequently in probability problems.
+The factorial of a positive integer n (written n! and pronounced “n
+factorial”) is equal to the product of the positive integers from 1 to n.
+Write an application that calculates the factorials of 1 through 20. Use type
+long. Display the results in tabular format. What difficulty might prevent
+you from calculating the factorial of 100? */
 
 package ch05.ex05_13;
 
 public class Factorials {
 
 	public static void main(String[] args) {
-		for (int i = 0; i <= 20; i++) {
-			
+		for (int i = 1; i <= 20; i++) {
+
 			long factorial = 1;
-			for (int j = 2; j <= i; j++)
+			for (int j = i; j > 1; j--)
 				factorial *= j;
 
 			System.out.printf("%d! = %d%n", i, factorial);
