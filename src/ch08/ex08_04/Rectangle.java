@@ -1,16 +1,16 @@
 package ch08.ex08_04;
 
 public class Rectangle {
-	private double width;
 	private double length;
+	private double width;
 
 	public Rectangle() {
 		this(1, 1);
 	}
 
-	public Rectangle(int width, int length) {
-		this.setWidth(width);
+	public Rectangle(int length, int width) {
 		this.setLength(length);
+		this.setWidth(width);
 	}
 
 	public double area() {
@@ -21,16 +21,13 @@ public class Rectangle {
 		return 2 * (getWidth() + getLength());
 	}
 
-	public void setWidth(double width) {
-		if (width <= 0.0 || width >= 20.0)
-			throw new IllegalArgumentException("width must be between 0 and 20");
-
-		this.width = width;
+	public double getLength() {
+		return length;
 	}
 
 	public void setLength(double length) {
 		if (length <= 0.0 || length >= 20.0)
-			throw new IllegalArgumentException("length must be between 0 and 20");
+			throw new IllegalArgumentException("length must be 0-20");
 
 		this.length = length;
 	}
@@ -39,8 +36,11 @@ public class Rectangle {
 		return width;
 	}
 
-	public double getLength() {
-		return length;
+	public void setWidth(double width) {
+		if (width <= 0.0 || width >= 20.0)
+			throw new IllegalArgumentException("width must be 0-20");
+
+		this.width = width;
 	}
 
 	public String toString() {

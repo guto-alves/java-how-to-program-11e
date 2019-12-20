@@ -1,28 +1,23 @@
-/*
- * 8.14 (Classe Data) Crie uma classe Date com as seguintes capacidades:
- * a) Gerar saída da data em múltiplos formatos, como
- * 
- * 	MM/DD/YYYY 
- * 	June 14, 1992 
- * 	DDD YYYY
- * 
- * b) Utilizar construtores sobrecarregados para criar objetos Date 
- * 	inicializados com datas dos formatos na parte (a). No primeiro caso, 
- * 	o construtor deve receber três valores inteiros. No segundo caso, 
- * 	deve receber uma String e dois valores inteiros. No terceiro caso, 
- * 	deve receber dois valores inteiros, o primeiro representando o número
- * 	de dias no ano. [Dica: para converter a representação de String do mês 
- * 	em um valor numérico, compare as Strings utilizando o método equals. 
- * 	Por exemplo, se s1 e s2 forem strings, a chamada de método 
- * 	s1.equals(s2) retornará true se as strings forem idênticas, caso 
- * 	contrário retornará false.]
- */
+/* 8.15 (Date Class) Create class Date with the following capabilities:
+ 
+1. Output the date in multiple formats, such as
+  
+  	MM/DD/YYYY 
+  	June 14, 1992 
+  	DDD YYYY
+  
+2. Use overloaded constructors to create Date objects initialized
+with dates of the formats in part (a). In the first case the
+constructor should receive three integer values. In the second
+case it should receive a String and two integer values. In the
+third case it should receive two integer values, the first of which
+represents the day number in the year. */
 
-package ch08.ex08_14;
+package ch08.ex08_15;
 
 public class Date {
 	public final static int MM_DD_YYYY = 1;
-	public final static int Month_DD_YYYY = 2;
+	public final static int MONTH_DD_YYYY = 2;
 	public final static int DDD_YYYY = 3;
 
 	private final int[] daysPerMonth = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
@@ -73,7 +68,7 @@ public class Date {
 		case MM_DD_YYYY:
 			System.out.printf("%02d/%02d/%d%n", month, day, year);
 			break;
-		case Month_DD_YYYY:
+		case MONTH_DD_YYYY:
 			System.out.printf("%s %02d, %d%n", months[month], day, year);
 			break;
 		case DDD_YYYY:
