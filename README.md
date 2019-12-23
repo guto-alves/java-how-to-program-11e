@@ -13,10 +13,10 @@ My solutions to exercises in the book Deitel & Deitel - Java How to Program, 11/
 > - **Chapter 7**  - [Arrays and ArrayLists](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch07)
 > - **Chapter 8**  - [Classes and Objects: A Deeper Look](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch08)
 > - **Chapter 9**  - [Object-Oriented Programming: Inheritence](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch09)
-> - **Chapter 10** - Object-Oriented Programming: Polymorphism and Interfaces 
-> - **Chapter 11** - Exception Handling: A Deeper Look
-> - **Chapter 12** - JavaFX Graphical User Interfaces: Part 1
-> - **Chapter 13** - JavaFX GUI: Part 2
+> - **Chapter 10** - [Object-Oriented Programming: Polymorphism and Interfaces](https://github.com/guto-alves/Java-Como-Programar-10Ed/tree/master/src/ch10)
+> - **Chapter 11** - [Exception Handling: A Deeper Look](https://github.com/guto-alves/Java-Como-Programar-10Ed/tree/master/src/ch11)
+> - **Chapter 12** - [JavaFX Graphical User Interfaces: Part 1](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch12)
+> - **Chapter 13** - [JavaFX GUI: Part 2](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch13)
 > - **Chapter 14** - [Strings, Characters and Regular Expressions](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch14)
 > - **Chapter 15** - [Files, Input/Output Streams, NIO and XML Serialization](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch15)
 > - **Chapter 16** - [Generic Collections](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch16)
