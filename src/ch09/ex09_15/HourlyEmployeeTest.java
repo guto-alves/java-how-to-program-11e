@@ -1,24 +1,22 @@
-/*
- * Objetivo: 9.15 (Criando uma nova subclasse de Employee) Outros tipos de 
- * Employees podem incluir SalariedEmployees, que recebem um salário 
- * semanal fixo; PieceWorkers, que são pagos pelo número de peças que 
- * produzem; ou HourlyEmployees, que recebem um valor 50% maior para as 
- * horas extras. Crie uma classe HourlyEmployee, que é herdada da classe
- * Employee (Exercício 9.14), e tem variáveis de instância hours 
- * (um double), que representa as horas trabalhadas, e wage (um double), 
- * que representa os salários por hora, além de um construtor que recebe 
- * como argumentos primeiro nome, sobrenome, número de seguro social, 
- * salário por hora e número de horas trabalhadas, métodos set e get  para 
- * manipular hours e wage, um método earnings para calcular os rendimentos 
- * de um HourlyEmployee com base nas horas trabalhadas e um método toString 
- * que retorna a representação String de HourlyEmployee. O método setWage
- * deve assegurar que wage não seja negativo, e setHours, que o valor das 
- * horas esteja entre 0 e 168 (o número total de horas em uma semana). Use 
- * a classe HourlyEmployee em um programa de teste, semelhante ao da 
- * Figura 9.5.
- * 
- * Autor: Gustavo Alves
- */
+/* 9.15 (Creating a New Subclass of Employee) Other types of
+Employees might include Salaried-Employees who get paid a
+fixed weekly salary, PieceWorkers who get paid by the number of
+pieces they produce or HourlyEmployees who get paid an hourly wage
+with time-and-a-half�1.5 times the hourly wage�for hours worked over
+40 hours.
+Create class HourlyEmployee that inherits from class Employee
+(Exercise 9.14 ) and has instance variable hours (a double) that
+represents the hours worked, instance variable wage (a double ) that
+represents the wages per hour, a constructor that takes as arguments a first
+name, a last name, a social security number, an hourly wage and the
+number of hours worked, set and get methods for manipulating the hours
+and wage, an earnings method to calculate an HourlyEmployee�s
+earnings based on the hours worked and a toString method that returns
+the HourlyEmployee�s String representation. Method setWage
+should ensure that wage is nonnegative, and setHours should ensure
+that the value of hours is between 0 and 168 (the total number of hours in
+a week). Use class HourlyEmployee in a test program that�s similar to
+the one in Fig. 9.5. */
 
 package ch09.ex09_15;
 
