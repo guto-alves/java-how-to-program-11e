@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<GridPane hgap="8.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1">
+   <children>
+      <Label text="Eiffel Tower in France" />
+      <Label text="Statue of Liberty in the USA" GridPane.columnIndex="3" />
+      <Label text="Kremlin in Russia" GridPane.columnIndex="2" />
+      <Label text="Great Wall of China" GridPane.columnIndex="1" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+         <image>
+            <Image url="@images/eiffeltower.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <image>
+            <Image url="@images/greatwall.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <image>
+            <Image url="@images/xrussia_kremlin.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="135.0" fitWidth="200.0" pickOnBounds="true" smooth="false" GridPane.columnIndex="3" GridPane.rowIndex="1">
+         <image>
+            <Image url="@images/usa_statueofliberty.jpg" />
+         </image>
+      </ImageView>
+   </children>
+   <rowConstraints>
+      <RowConstraints valignment="CENTER" />
+      <RowConstraints minHeight="-Infinity" />
+   </rowConstraints>
+   <columnConstraints>
+      <ColumnConstraints halignment="CENTER" />
+      <ColumnConstraints halignment="CENTER" minWidth="-Infinity" />
+      <ColumnConstraints halignment="CENTER" minWidth="-Infinity" />
+      <ColumnConstraints halignment="CENTER" minWidth="-Infinity" />
+   </columnConstraints>
+   <padding>
+      <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+   </padding>
+</GridPane>
