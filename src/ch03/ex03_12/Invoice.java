@@ -24,8 +24,14 @@ public class Invoice {
 	public Invoice(String number, String description, int quantity, double pricePerItem) {
 		this.number = number;
 		this.description = description;
-		this.quantity = quantity;
-		this.pricePerItem = pricePerItem;
+
+		if (quantity > 0) {
+			this.quantity = quantity;
+		}
+
+		if (pricePerItem > 0.0) {
+			this.pricePerItem = pricePerItem;
+		}
 	}
 
 	public double getInvoiceAmount() {
@@ -53,7 +59,9 @@ public class Invoice {
 	}
 
 	public void setQuantity(int quantity) {
-		this.quantity = quantity < 0 ? 0 : quantity;
+		if (quantity > 0) {
+			this.quantity = quantity;
+		}
 	}
 
 	public double getPricePerItem() {
@@ -61,6 +69,8 @@ public class Invoice {
 	}
 
 	public void setPricePerItem(double pricePerItem) {
-		this.pricePerItem = pricePerItem < 0 ? 0.0 : pricePerItem;
+		if (pricePerItem > 0.0) {
+			this.pricePerItem = pricePerItem;
+		}
 	}
 }

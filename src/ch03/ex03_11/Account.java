@@ -26,11 +26,6 @@ public class Account {
 		}
 	}
 
-	// method returns the account balance
-	public double getBalance() {
-		return balance;
-	}
-
 	public void whithdraw(double withdrawal) {
 		if (withdrawal > balance) {
 			System.out.println("Withdrawal amount exceeded account balance.");
@@ -38,6 +33,11 @@ public class Account {
 		}
 
 		balance = balance - withdrawal;
+	}
+
+	// method returns the account balance
+	public double getBalance() {
+		return balance;
 	}
 
 	// method that sets the name

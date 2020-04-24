@@ -39,11 +39,13 @@ public class DuplicateElimination {
 					break;
 				}
 			}
-
-			for (int j = 0; j < i; j++) {
-				if (array[j] == array[i]) {
-					unique = false;
-					break;
+			
+			if (unique) {
+				for (int j = 0; j < i; j++) {
+					if (array[j] == array[i]) {
+						unique = false;
+						break;
+					}
 				}
 			}
 

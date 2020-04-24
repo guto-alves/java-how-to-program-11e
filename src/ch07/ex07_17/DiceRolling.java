@@ -18,8 +18,7 @@ public class DiceRolling {
 	public static void main(String[] args) {
 		int[] frequency = new int[13];
 
-		for (int i = 0; i < 36000000; i++) {
-			System.out.println(i);
+		for (int i = 0; i < 36_000_000; i++) {
 			int die1 = 1 + random.nextInt(6);
 			int die2 = 1 + random.nextInt(6);
 
@@ -30,8 +29,9 @@ public class DiceRolling {
 
 		System.out.printf("%s %s%n", "Sum", "Frequency");
 
-		for (int i = 2; i < frequency.length; i++)
-			System.out.printf("%2d %5d%n", i, frequency[i]);
+		for (int i = 2; i < frequency.length; i++) {
+			System.out.printf("%2d %10d%n", i, frequency[i]);
+		}
 	}
 
 }
