@@ -2,8 +2,7 @@
 
 My solutions to exercises in the book Deitel & Deitel - Java How to Program, 11/e (Early Objects).
 
-### Chapter List (Updated as they are started)
-
+## Chapter List
 > - **Chapter 1**  - Introduction to Computers, the Internet and Java
 > - **Chapter 2**  - [Introduction to Java Applications; Input/Output and Operators](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch02)
 > - **Chapter 3**  - [Introduction to Classes, Objects, Methods and Strings](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch03)
