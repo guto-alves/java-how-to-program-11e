@@ -21,8 +21,9 @@ public class ProcessingEmployees {
 				new Employee("Jason", "Blue", 3200, "Sales"), 
 				new Employee("Wendy", "Brown", 4236.4, "Marketing"));
 
-		Map<String, List<Employee>> groupedByDepartment = list.stream()
-				.collect(Collectors.groupingBy(Employee::getDepartment));
+		Map<String, List<Employee>> groupedByDepartment = 
+				list.stream()
+					.collect(Collectors.groupingBy(Employee::getDepartment));
 
 		groupedByDepartment.forEach((department, employees) -> {
 			System.out.printf("%s%n", department);
