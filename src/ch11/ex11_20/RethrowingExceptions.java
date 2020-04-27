@@ -14,7 +14,6 @@ public class RethrowingExceptions {
 		try {
 			someMethod2();
 		} catch (Exception e) {
-			e.printStackTrace();
 			throw new Exception("Exception thrown in someMethod");
 		}
 	}
