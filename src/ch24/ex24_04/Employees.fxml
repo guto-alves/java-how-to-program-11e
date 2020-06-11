@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch24.ex24_04.EmployeesController">
+	<center>
+		<GridPane BorderPane.alignment="CENTER">
+			<columnConstraints>
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="50.0" />
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+			</rowConstraints>
+			<children>
+				<Label text="Social Security Number" />
+				<Label text="First Name" GridPane.rowIndex="1" />
+				<Label text="Last Name" GridPane.rowIndex="2" />
+				<Label text="Birthday" GridPane.rowIndex="3" />
+				<Label text="Department Name" GridPane.rowIndex="4" />
+				<TextField fx:id="socialSecurityNumberTextField" GridPane.columnIndex="1" />
+				<TextField fx:id="firstNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+				<TextField fx:id="lastNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+				<DatePicker fx:id="birthdayDatePicker" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+				<TextField fx:id="departmentNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+				<TabPane fx:id="payrollTabPane" tabClosingPolicy="UNAVAILABLE" GridPane.columnSpan="2147483647" GridPane.rowIndex="5">
+					<tabs>
+						<Tab text="Salaried">
+							<content>
+								<GridPane>
+									<columnConstraints>
+										<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+										<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+									</columnConstraints>
+									<rowConstraints>
+										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+									</rowConstraints>
+									<children>
+										<Label text="Weekly Salary" />
+										<Label text="Bonus" GridPane.rowIndex="1" />
+										<TextField fx:id="salariedWeeklySalaryTextField" GridPane.columnIndex="1" />
+										<TextField fx:id="salariedBonusTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+									</children>
+								</GridPane>
+							</content>
+						</Tab>
+						<Tab text="Comission">
+							<content>
+								<GridPane>
+									<columnConstraints>
+										<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+										<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+									</columnConstraints>
+									<rowConstraints>
+										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+									</rowConstraints>
+									<children>
+										<Label text="Gross Sales" />
+										<Label text="Commission Rate" GridPane.rowIndex="1" />
+										<TextField fx:id="commissionGrossSalesTextField" GridPane.columnIndex="1" />
+										<TextField fx:id="commissionRateTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+									</children>
+								</GridPane>
+							</content>
+						</Tab>
+						<Tab text="Base-Plus Comission">
+							<content>
+								<GridPane>
+									<columnConstraints>
+										<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+										<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+									</columnConstraints>
+									<rowConstraints>
+										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+									</rowConstraints>
+									<children>
+										<Label text="Gross Sales" />
+										<Label text="Commission Rate" GridPane.rowIndex="1" />
+										<TextField fx:id="basePlusGrossSalesTextField" GridPane.columnIndex="1" />
+										<TextField fx:id="basePlusCommissionRateTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+										<Label text="Base Salary" GridPane.rowIndex="2" />
+										<Label text="Bonus" GridPane.rowIndex="3" />
+										<TextField fx:id="basePlusSalaryTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+										<TextField fx:id="basePlusBonusTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+									</children>
+								</GridPane>
+							</content>
+						</Tab>
+						<Tab text="Hourly">
+							<content>
+								<GridPane>
+									<columnConstraints>
+										<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+										<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+									</columnConstraints>
+									<rowConstraints>
+										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+										<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+									</rowConstraints>
+									<children>
+										<Label text="Hours" />
+										<Label text="Wage" GridPane.rowIndex="1" />
+										<TextField fx:id="hourlyHoursTextField" GridPane.columnIndex="1" />
+										<TextField fx:id="hourlyWageTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+										<TextField fx:id="hourlyBonusTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+										<Label text="Bonus" GridPane.rowIndex="2" />
+									</children>
+								</GridPane>
+							</content>
+						</Tab>
+					</tabs>
+               <GridPane.margin>
+                  <Insets top="8.0" />
+               </GridPane.margin>
+				</TabPane>
+				<Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addEmployeeButtonPressed" text="Add" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+					<GridPane.margin>
+						<Insets left="32.0" right="32.0" top="16.0" />
+					</GridPane.margin>
+				</Button>
+			</children>
+			<padding>
+				<Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+			</padding>
+		</GridPane>
+	</center>
+	<padding>
+		<Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+	</padding>
+</BorderPane>

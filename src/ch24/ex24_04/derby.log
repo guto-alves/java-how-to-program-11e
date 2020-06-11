@@ -1,0 +1,19 @@
+----------------------------------------------------------------
+Wed Jun 10 21:16:58 BRT 2020:
+ Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instância a816c00e-0172-a0bc-a891-000003ce1fa0
+no diretório de banco de dados C:\Users\Gustavo\git\java-how-to-program-11e\src\ch24\ex24_04\employees 
+
+java.vendor=Oracle Corporation
+java.runtime.version=12.0.1+12
+user.dir=C:\Users\Gustavo\git\java-how-to-program-11e\src\ch24\ex24_04
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Carregador de classe do banco de dados iniciado - derby.database.classpath=''
+----------------------------------------------------------------
+Wed Jun 10 21:21:00 BRT 2020: Shutting down Derby engine
+----------------------------------------------------------------
+Wed Jun 10 21:21:00 BRT 2020:
+Encerrando a instância a816c00e-0172-a0bc-a891-000003ce1fa0
+----------------------------------------------------------------
