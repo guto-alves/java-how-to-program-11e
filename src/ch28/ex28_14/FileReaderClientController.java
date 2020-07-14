@@ -8,6 +8,8 @@ import java.util.concurrent.Executors;
 import ch28.ex28_14.Client.MessageReceivedListener;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -27,35 +29,43 @@ public class FileReaderClientController implements MessageReceivedListener {
 
 	@FXML
 	private Button saveChangesButton;
+	
+	public void initialize() {
+		try {
+			client = new Client("localhost", this);
+			
+			ExecutorService executor = Executors.newCachedThreadPool();
+			executor.execute(client);
+		} catch (IOException e) {
+			e.printStackTrace();
+			System.exit(1);
+		}
+	}
 
 	@FXML
 	void saveChangesButtonPressed(ActionEvent event) {
 		String changedFileText = contentArea.getText();
+		
 		client.sendData(changedFileText);
+		Alert alert = new Alert(AlertType.INFORMATION);
+		alert.setTitle("File Saved");
+		alert.setContentText("File successfuly saved");
+		alert.showAndWait();
 	}
 
 	@FXML
 	void selectFileButtonPressed(ActionEvent event) {
 		FileChooser fileChooser = new FileChooser();
 		fileChooser.setTitle("Select file");
-		fileChooser.getExtensionFilters().add(new ExtensionFilter("Text file", "*.txt"));
+		fileChooser.getExtensionFilters().add(
+				new ExtensionFilter("Text file", "*.txt"));
 
-		File file = fileChooser.showOpenDialog(contentArea.getScene().getWindow());
+		File file = fileChooser.showOpenDialog(
+				contentArea.getScene().getWindow());
 
 		if (file != null) {
 			fileNameTextField.setText(file.getName());
 			client.sendData(file.toPath().toString());
-		}
-	}
-
-	public void initialize() {
-		try {
-			client = new Client("127.0.0.1", this);
-			ExecutorService executor = Executors.newCachedThreadPool();
-			executor.execute(client);
-		} catch (IOException e) {
-			e.printStackTrace();
-			System.exit(1);
 		}
 	}
 
@@ -66,5 +76,4 @@ public class FileReaderClientController implements MessageReceivedListener {
 		contentArea.setDisable(false);
 		saveChangesButton.setDisable(false);
 	}
-
 }

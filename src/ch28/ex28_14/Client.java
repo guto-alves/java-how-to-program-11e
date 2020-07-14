@@ -30,7 +30,7 @@ public class Client implements Runnable {
 	}
 
 	private void connectToServer() throws IOException {
-		client = new Socket(InetAddress.getByName(host), Server.SERVER_PORT);
+		client = new Socket(InetAddress.getByName(host), FileReaderServer.SERVER_PORT);
 	}
 
 	private void getStreams() throws IOException {
@@ -67,7 +67,7 @@ public class Client implements Runnable {
 			output.writeObject(message);
 			output.flush();
 		} catch (IOException e) {
-			System.out.println("Error writing message");
+			System.out.println("Error sending data.");
 		}
 	}
 

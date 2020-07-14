@@ -31,13 +31,15 @@ public class FileReaderClient {
 	}
 
 	private void connectToServer() throws IOException {
-		client = new Socket(InetAddress.getByName(host), FileReaderServer.SERVER_PORT);
+		client = new Socket(InetAddress.getByName(host),
+				FileReaderServer.SERVER_PORT);
 	}
 
 	private void getStreams() throws IOException {
-		input = new ObjectInputStream(client.getInputStream());
 		output = new ObjectOutputStream(client.getOutputStream());
 		output.flush();
+		
+		input = new ObjectInputStream(client.getInputStream());
 	}
 
 	private void processConnection() throws IOException {
@@ -47,6 +49,7 @@ public class FileReaderClient {
 			try {
 				serverMessage = (String) input.readObject();
 				System.out.println(serverMessage);
+				break;
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
 			}
@@ -63,6 +66,15 @@ public class FileReaderClient {
 		}
 	}
 
+	private void sendData(String message) {
+		try {
+			output.writeObject(message);
+			output.flush();
+		} catch (IOException e) {
+			System.out.println("Error writing message");
+		}
+	}
+	
 	private void execute() {
 		Scanner scanner = new Scanner(System.in);
 
@@ -74,19 +86,4 @@ public class FileReaderClient {
 
 		scanner.close();
 	}
-
-	private void sendData(String message) {
-		try {
-			output.writeObject(message);
-			output.flush();
-		} catch (IOException e) {
-			System.out.println("Error writing message");
-		}
-	}
-
-	public static void main(String[] args) {
-		FileReaderClient client = new FileReaderClient("127.0.0.1");
-		client.run();
-	}
-
 }

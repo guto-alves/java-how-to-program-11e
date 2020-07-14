@@ -14,8 +14,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
-public class Server {
-	public static final int SERVER_PORT = 12348;
+public class FileReaderServer {
+	public static final int SERVER_PORT = 12349;
 
 	private ServerSocket server;
 	private Socket connection;
@@ -24,12 +24,10 @@ public class Server {
 
 	private Path currentPath;
 
-	public Server() throws IOException {
-		server = new ServerSocket(SERVER_PORT, 100);
-	}
-
-	public void run() {
+	public void runServer() {
 		try {
+			server = new ServerSocket(SERVER_PORT, 100);
+			
 			while (true) {
 				try {
 					waitForConnection();
@@ -61,8 +59,9 @@ public class Server {
 
 	private void processConnection() throws IOException {
 		String message = "";
+		
 		do {
-			try {
+			try { 
 				message = (String) input.readObject();
 
 				if (!message.equals("-1")) {
@@ -99,7 +98,7 @@ public class Server {
 			output.writeObject(message);
 			output.flush();
 		} catch (IOException e) {
-			System.out.println("Error waiting message");
+			System.out.println("Error sending message"); 
 		}
 	}
 
@@ -131,10 +130,4 @@ public class Server {
 
 		return fileText.toString();
 	}
-
-	public static void main(String[] args) throws IOException {
-		Server server = new Server();
-		server.run();
-	}
-
 }

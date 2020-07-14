@@ -5,12 +5,11 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-
+<?import javafx.scene.layout.FlowPane?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch28.ex28_14.FileReaderClientController">
    <center>
-      <TextArea fx:id="contentArea" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <TextArea fx:id="contentArea" editable="false" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets bottom="8.0" top="8.0" />
          </BorderPane.margin>
@@ -23,11 +22,11 @@
       <Button fx:id="saveChangesButton" disable="true" mnemonicParsing="false" onAction="#saveChangesButtonPressed" text="Save Changes" BorderPane.alignment="CENTER" />
    </bottom>
    <top>
-      <HBox alignment="CENTER_LEFT" spacing="8.0" BorderPane.alignment="CENTER">
+      <FlowPane hgap="8.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="fileNameTextField" editable="false" />
+            <TextField fx:id="fileNameTextField" editable="false" prefWidth="300.0" />
             <Button mnemonicParsing="false" onAction="#selectFileButtonPressed" text="Select File" />
          </children>
-      </HBox>
+      </FlowPane>
    </top>
 </BorderPane>

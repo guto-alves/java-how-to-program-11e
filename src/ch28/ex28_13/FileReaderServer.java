@@ -10,7 +10,7 @@ import java.nio.file.Files;
 import java.nio.file.InvalidPathException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class FileReaderServer {
 	public static final int SERVER_PORT = 12348;
@@ -20,12 +20,10 @@ public class FileReaderServer {
 	private ObjectInputStream input;
 	private ObjectOutputStream output;
 
-	public FileReaderServer() throws IOException {
-		server = new ServerSocket(SERVER_PORT, 100);
-	}
-
-	public void run() {
+	public void runServer() {
 		try {
+			server = new ServerSocket(SERVER_PORT, 100);
+
 			while (true) {
 				try {
 					waitForConnection();
@@ -45,7 +43,8 @@ public class FileReaderServer {
 	private void waitForConnection() throws IOException {
 		System.out.println("Waiting for connection... ");
 		connection = server.accept();
-		System.out.println("Connected");
+		System.out.println("Connection received from: " + 
+				connection.getInetAddress().getHostName());
 	}
 
 	private void getStreams() throws IOException {
@@ -53,29 +52,32 @@ public class FileReaderServer {
 		output.flush();
 
 		input = new ObjectInputStream(connection.getInputStream());
+		System.out.println("Got I/O streams");
 	}
 
 	private void processConnection() throws IOException {
 		String message = "";
+
 		do {
 			try {
 				message = (String) input.readObject();
 
 				if (!message.equals("-1")) {
-
 					try {
 						Path path = Paths.get(message);
 
-						if (!Files.isDirectory(path))
+						if (!Files.exists(path) || Files.isDirectory(path)) {
+							sendData("The file does not exists.");
+						} else {
 							sendData(getFileContent(path));
-
+						}
 					} catch (InvalidPathException e) {
-					} finally {
-						sendData("File not exists");
+						sendData("Invalid Path");
 					}
 				}
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
+			} catch (Exception ignored) {
 			}
 		} while (!message.equals("-1"));
 	}
@@ -95,32 +97,19 @@ public class FileReaderServer {
 			output.writeObject(message);
 			output.flush();
 		} catch (IOException e) {
-			System.out.println("Error waiting message");
+			System.out.println("Error sending data");
 		}
 	}
 
-	public String getFileContent(Path path) {
-		StringBuilder fileText = new StringBuilder();
-
+	public String getFileContent(Path path) {		
 		try {
-			Scanner reader = new Scanner(path);
-
-			while (reader.hasNext()) {
-				fileText.append(reader.nextLine());
-				fileText.append("\n");
-			}
-			reader.close();
-
+			return Files.lines(path)
+				.collect(Collectors.joining("\n"));
 		} catch (IOException e) {
-			sendData("File not exists");
+			e.printStackTrace();
 		}
-
-		return fileText.toString();
-	}
-
-	public static void main(String[] args) throws IOException {
-		FileReaderServer server = new FileReaderServer();
-		server.run();
+		
+		return null;
 	}
 
 }
