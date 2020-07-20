@@ -31,7 +31,8 @@ public class AddressBookController {
 	private final PersonQueries personQueries = new PersonQueries();
 
 	// stores list of Person objects that results from a database query
-	private final ObservableList<Person> contactList = FXCollections.observableArrayList();
+	private final ObservableList<Person> contactList = 
+			FXCollections.observableArrayList();
 
 	// populate listView and set up listener for selection events
 	public void initialize() {
@@ -80,9 +81,11 @@ public class AddressBookController {
 				emailTextField.getText(), phoneTextField.getText());
 
 		if (result == 1) {
-			displayAlert(AlertType.INFORMATION, "Entry Added", "New entry successfully added.");
+			displayAlert(AlertType.INFORMATION, "Entry Added",
+					"New entry successfully added.");
 		} else {
-			displayAlert(AlertType.ERROR, "Entry Not Added", "Unable to add entry.");
+			displayAlert(AlertType.ERROR, "Entry Not Added", 
+					"Unable to add entry.");
 		}
 
 		getAllEntries();
@@ -96,9 +99,11 @@ public class AddressBookController {
 				emailTextField.getText(), phoneTextField.getText());
 
 		if (result == 1) {
-			displayAlert(AlertType.INFORMATION, "Entry Updated", "Entry successfully updated.");
+			displayAlert(AlertType.INFORMATION, "Entry Updated", 
+					"Entry successfully updated.");
 		} else {
-			displayAlert(AlertType.ERROR, "Entry Not Updated", "Unable to update entry.");
+			displayAlert(AlertType.ERROR, "Entry Not Updated", 
+					"Unable to update entry.");
 		}
 
 		getAllEntries();
@@ -110,9 +115,11 @@ public class AddressBookController {
     			listView.getSelectionModel().getSelectedItem().getAddressID());
     	
 		if (result == 1) {
-			displayAlert(AlertType.INFORMATION, "Entry Deleted", "New entry successfully deleted.");
+			displayAlert(AlertType.INFORMATION, "Entry Deleted",
+					"New entry successfully deleted.");
 		} else {
-			displayAlert(AlertType.ERROR, "Entry Not Deleted", "Unable to delete entry.");
+			displayAlert(AlertType.ERROR, "Entry Not Deleted",
+					"Unable to delete entry.");
 		}
 		
     	getAllEntries();
@@ -140,23 +147,11 @@ public class AddressBookController {
 	}
 
 	// display an Alert dialog
-	private void displayAlert(AlertType type, String title, String message) {
+	private void displayAlert(AlertType type, String title,
+			String message) {
 		Alert alert = new Alert(type);
 		alert.setTitle(title);
 		alert.setContentText(message);
 		alert.showAndWait();
 	}
 }
-
-/**************************************************************************
- * (C) Copyright 1992-2018 by Deitel & Associates, Inc. and * Pearson Education,
- * Inc. All Rights Reserved. * * DISCLAIMER: The authors and publisher of this
- * book have used their * best efforts in preparing the book. These efforts
- * include the * development, research, and testing of the theories and programs
- * * to determine their effectiveness. The authors and publisher make * no
- * warranty of any kind, expressed or implied, with regard to these * programs
- * or to the documentation contained in these books. The authors * and publisher
- * shall not be liable in any event for incidental or * consequential damages in
- * connection with, or arising out of, the * furnishing, performance, or use of
- * these programs. *
- *************************************************************************/
