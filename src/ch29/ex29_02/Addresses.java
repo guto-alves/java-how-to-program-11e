@@ -30,20 +30,25 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Addresses implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Basic(optional = false)
 	@Column(name = "ADDRESSID")
 	private Integer addressid;
+	
 	@Basic(optional = false)
 	@Column(name = "FIRSTNAME")
 	private String firstname;
+	
 	@Basic(optional = false)
 	@Column(name = "LASTNAME")
 	private String lastname;
+	
 	@Basic(optional = false)
 	@Column(name = "EMAIL")
 	private String email;
+	
 	@Basic(optional = false)
 	@Column(name = "PHONENUMBER")
 	private String phonenumber;
