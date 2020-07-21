@@ -31,7 +31,7 @@ My solutions to exercises in the book Deitel & Deitel - Java How to Program, 11/
 > - **Chapter 26** - [Swing GUI Components: Part 1](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch26)
 > - **Chapter 27** - [Graphics and Java 2D](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch27)
 > - **Chapter 28** - [Networking](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch28)
-> - **Chapter 29** - Java Persistence API (JPA)
+> - **Chapter 29** - [Java Persistence API (JPA)](https://github.com/Guto-Alves/Java-Como-Programar-10Ed/tree/master/src/ch29)
 > - **Chapter 30** - JavaServer™ Faces Web Apps: Part 1
 > - **Chapter 31** - JavaServer™ Faces Web Apps: Part 2
 > - **Chapter 32** - REST-Based Web Services
